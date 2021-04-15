@@ -4,7 +4,7 @@ The Homei Data Analysis platform is designed for Restaurant Operators on the Hom
 
 ## Functionality
 
-The Data Analysis platform can filter and analyze data collected from the backend data from one restaurant.     
+The Data Analysis platform can filter and analyze data collected from the backend data from one restaurant.  It is designed originally for restaurant to manage their stock, by giving them the recommended dishes in order to keep all the stocked ingredients flow in an appropriate speed.
 
 It can visualize the following items:
 
@@ -26,11 +26,9 @@ This project presents its functionalities on web pages driven by the Flask Web F
 
 Libraries such as pandas, numpy, re are used for loading data and data preprocessing, and basic data analysis using aggregation, data sort etc.
 
-The chart displayed on the web pages are rendered by 
+The chart displayed on the web pages are rendered by  Apache Echarts: http://echarts.apache.org/zh/
 
-[Apache Echarts]: http://echarts.apache.org/zh/	"Apache Echarts"
-
-, a data visualisation library based on javascript.
+, a data visualization library based on JavaScript.
 
 The ML part is realized with sklearn, Tensorflow, joblib and matplotlib. The libraries are used to train the GRU-NN in order to predict orders.
 
@@ -50,10 +48,22 @@ The ML part is realized with sklearn, Tensorflow, joblib and matplotlib. The lib
 
 ### Dataset
 
-Attention, the current data is collected from the 
+Attention, the current data is collected from the Kaggle Takeaway Food Orders - Updated: https://www.kaggle.com/henslersoftware/19560-indian-takeaway-orders  from a restaurant in London, UK. Because currently the Homei platform is not in operation, thus there is no real data available for Machine Learning or data visualization. 
 
-[Kaggle Takeaway Food Orders - Updated]: https://www.kaggle.com/henslersoftware/19560-indian-takeaway-orders	"Kaggle Takeaway Food Orders - Updated"
-
-from a restaurant in London, UK. Because currently the Homei platform is not in operation, thus there is no real data available for Machine Learning or data visualisation.
+In addition, certain data are randomly generated from the scripts.
 
 ## Project Structure
+
+- app.py // main program
+
+- static
+  - javascript library of Apache Echarts
+- template
+  - HTML templates
+  - css
+- dataset
+  - csv data
+  - data-generating script (generateData.py generateData1.py)
+  - model-training script (ML_GRU.py)
+- checkpoint
+  - parameters of the training model
