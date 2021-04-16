@@ -12,7 +12,7 @@
 <body>
 
 	<div class="w3-top">
-	  <div class="w3-bar" id="myNavbar">
+	  <div class="w3-bar" id="myNavbar" >
 	    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
 	      <i class="fa fa-bars"></i>
 	    </a>
@@ -30,10 +30,12 @@
 
 		<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
 		  <div class="w3-display-middle" style="white-space:nowrap;">
-		    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Prediction <span class="w3-hide-small">Of</span> Orders</span>
+		    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Prediction <span class="w3-hide-small">Of</span> Dine In and Take Away Orders</span>
 		  </div>
 		</div>
 
+		<br><br>
+		<label class="w3-xlarge">Foresee the orders either from take away or dine in</label>
 		<br><br><br>
 
 		<div style="display: flex; flex-direction: row; justify-content: space-around;">
@@ -48,7 +50,7 @@
 
 		</div>
 
-		<div id="main" style="width:800px; height:600px;"></div>
+		<div id="main" style="width:800px; height:500px;"></div>
 
 	</div>
 
@@ -79,6 +81,9 @@
 		    tooltip: {
 		        trigger: 'axis'
 		    },
+		    legend: {
+		        data: ['Dine In', 'Take Away']
+		    },	
 		    grid: {
 		        left: '3%',
 		        right: '4%',
